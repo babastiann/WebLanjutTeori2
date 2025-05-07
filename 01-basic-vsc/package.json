@@ -1,0 +1,14 @@
+{
+  "name": "01-basic-vsc",
+  "version": "1.0.0",
+  "description": "basic node.js",
+  "main": "app01.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Raja Iblis",
+  "license": "MIT",
+  "dependencies": {
+    "mysql": "^2.18.1"
+  }
+}
