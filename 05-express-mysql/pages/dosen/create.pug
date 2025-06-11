@@ -1,0 +1,50 @@
+extend ../layouts/master
+
+block web-css
+
+block web-js 
+
+block web-content
+  .page-header
+      h4.page-title Dashboard
+      ul.breadcrumbs
+          li.nav-home
+              a(href='#')
+                  i.icon-home
+          li.separator
+              i.icon-arrow-right
+          li.nav-item
+              a(href='#') Pages
+          li.separator
+              i.icon-arrow-right
+          li.nav-item
+              a(href='#') Starter Page
+  .page-category Inner page content goes here
+    .card
+      .card-body
+        .d-flex.align-items-left.align-items-md-center.flex-column.flex-md-row.pt-2.pb-4
+        div
+          h3.fw-bold.mb-3 Manage Data Dosen
+          h6.op-7.mb-2 Free Bootstrap 5 Admin Halaman 1
+      .card
+        .card-header
+          .d-flex.align-items-center
+            h4.card-title Add Data Dosen
+        .card-body
+          .row
+            form(method='POST' action="/lecturer/create")
+              .form-group
+                label(for='nik') NIK
+                input#nik.form-control(type='text' name='nik' placeholder='e.g. 720001' required='' autofocus='' maxlength='7')
+              .form-group
+                label(for='nik') Name
+                input#name.form-control(type='text' name='name' placeholder='e.g. John Doe' required='')
+              .form-group
+                label(for='nik') Birth Date
+                input#birth_date.form-control(type='date' name='birth_date' required='')
+              .form-group
+                label(for='email') Email Address
+                input#email.form-control(type='email' name='email' placeholder='e.g. johndoe@email.com' required='')
+              .card-action
+                input.btn.btn-success(type='submit')
+                input.btn.btn-danger(type='reset' value='Cancel')

@@ -1,0 +1,38 @@
+extend ../layouts/master
+
+block web-css
+
+block web-js 
+
+block web-content
+  .page-header
+      h4.page-title Dashboard
+      ul.breadcrumbs
+          li.nav-home
+              a(href='#')
+                  i.icon-home
+          li.separator
+              i.icon-arrow-right
+          li.nav-item
+              a(href='#') Pages
+          li.separator
+              i.icon-arrow-right
+          li.nav-item
+              a(href='#') Starter Page
+  .page-category Inner page content goes here
+    .card
+      .card-body
+        table#table-dosen.table.table-striped
+          thead
+            tr
+              th NIK
+              th Name
+              th Email
+              th Birth Date
+          tbody
+            each dosen in dataDosen
+              tr
+                td #{dosen.nik}
+                td #{dosen.name}
+                td #{dosen.email}
+                td #{dosen.birth_date}
